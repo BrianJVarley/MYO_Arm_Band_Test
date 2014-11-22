@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyoTestv2", "MyoTestv1\MyoTestv2.csproj", "{C1FCDF11-7454-46D3-A73E-D8CF6A031921}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyoTestv3", "MyoTestv1\MyoTestv3.csproj", "{C1FCDF11-7454-46D3-A73E-D8CF6A031921}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyoSharp", "..\..\..\..\Desktop\MYO Stuff\MyoSharp-master\MyoSharp-master\MyoSharp\MyoSharp.csproj", "{B075C7E9-FE48-4508-B44C-1A259BCC8B22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyoSharp.ConsoleSample", "..\..\..\..\Desktop\MYO Stuff\MyoSharp-master\MyoSharp-master\MyoSharp.ConsoleSample\MyoSharp.ConsoleSample.csproj", "{27DA6BB8-8526-437E-9293-A877FC175653}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyoTestv2Consolidated", "MyoTestv2Consolidated", "{13C3123C-80E7-46B5-8843-DE56A86CA3F2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyoTestv3Consolidated", "MyoTestv3Consolidated", "{13C3123C-80E7-46B5-8843-DE56A86CA3F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

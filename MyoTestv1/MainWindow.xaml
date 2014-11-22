@@ -11,7 +11,11 @@
         <Image HorizontalAlignment="Left" Source="Images/myo_logo_tagline_inline_white.png" Height="40" Margin="353,269,0,0" VerticalAlignment="Top" Width="154"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="309,224,0,-5" VerticalAlignment="Top" Width="100"/>
         <Image HorizontalAlignment="Left" x:Name="gestureImg" Height="100" Margin="183,64,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="" x:Name="lblScoreCntr" Foreground="White" FontSize="16" HorizontalAlignment="Left" Margin="93,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="" x:Name="lblFistScoreCntr" Foreground="White" FontSize="16" HorizontalAlignment="Left" Margin="93,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="" x:Name="lblFingersSpreadScoreCntr" Foreground="White" FontSize="16" HorizontalAlignment="Left" Margin="93,133,0,0" VerticalAlignment="Top"/>
+        <Button Content="Submit" x:Name="submitProgressBtn" Click="submitProgressBtn_Click" Background="#00bdde" Foreground="White"  HorizontalAlignment="Left" Margin="229,209,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Fist Gestures" Foreground="White" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fingers Spread" Foreground="White" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>

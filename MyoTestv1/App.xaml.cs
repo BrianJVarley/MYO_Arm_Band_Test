@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace MyoTestv2
 {
@@ -13,5 +14,9 @@ namespace MyoTestv2
     /// </summary>
     public partial class App : Application
     {
+        public static MobileServiceClient MobileService = new MobileServiceClient(
+        "https://progressreportdb.azure-mobile.net/",
+        "yZdIWPDVuQQruDylqLZCVXvKsKRsKD40");
+
     }
 }

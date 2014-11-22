@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MyoSharp.Device;
 using MyoSharp.ConsoleSample.Internal;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace MyoTestv2
 {
@@ -22,7 +23,7 @@ namespace MyoTestv2
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window 
     {
         public MainWindow()
         {
@@ -74,7 +75,8 @@ namespace MyoTestv2
 
         #region Event Handlers
 
-        int scoreCntr = 0;
+        int fingersSpreadScoreCntr = 0;
+        int fistSpreadScoreCntr = 0;
 
         private void Pose_Triggered(object sender, PoseEventArgs e)
         {
@@ -88,8 +90,8 @@ namespace MyoTestv2
                 {
 
                     e.Myo.Vibrate(VibrationType.Short);
-                    scoreCntr++;
-                    lblScoreCntr.Content = scoreCntr;
+                    fistSpreadScoreCntr++;
+                    lblFistScoreCntr.Content = fistSpreadScoreCntr;
                     gestureImg.Source = new BitmapImage(new Uri
                    ("/MyoTestv1;component/Images/gesture_icons/blue_outline_LH_fist.png", UriKind.Relative));
 
@@ -99,6 +101,8 @@ namespace MyoTestv2
                 {
 
                     e.Myo.Vibrate(VibrationType.Short);
+                    fingersSpreadScoreCntr++;
+                    lblFingersSpreadScoreCntr.Content = fingersSpreadScoreCntr;
                     gestureImg.Source = new BitmapImage(new Uri
                    ("/MyoTestv1;component/Images/gesture_icons/blue_outline_LH_spread_fingers.png", UriKind.Relative));
 
@@ -111,6 +115,14 @@ namespace MyoTestv2
 
        
         #endregion
+
+       
+        private async void submitProgressBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Item item = new Item { Repititions = " " + fingersSpreadScoreCntr.ToString(), Date = " " + DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt"), User = "Brian Varley" , Exercise = "Fingers Spread"};
+            await App.MobileService.GetTable<Item>().InsertAsync(item);
+
+        }
 
 
     }
